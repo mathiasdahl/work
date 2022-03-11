@@ -1,6 +1,8 @@
 #!/bin/bash
 
-echo Downloading Java source code...
+echo
+
+echo Downloading SMB test client source code...
 
 curl -s -H "Cache-Control: no-cache" https://raw.githubusercontent.com/mathiasdahl/work/main/MySmbClient.java > MySmbClient.java
 
@@ -19,16 +21,14 @@ if $JAVA_HOME/bin/javac -classpath $myclasspath MySmbClient.java; then
   echo All done.
 
   echo
-
-  echo
   echo Now try an SMB upload with: 'smbtest smb://SERVER/SHARE/FILENAME DOMAIN USERNAME $password [NUMBEROFLINESTOWRITE]'
   echo
   echo 'DOMAIN can be empty ("")'
   echo NUMBEROFLINESTOWRITE is the number of 100 byte long lines to write to the file
-  echo '$password is the variable that keeps the password you entered earlier.'
+  echo '$password should be written like that and is the variable that keeps the password you entered earlier.'
   echo
   echo Example:
-  echo '  smbtest smb://myserver/myshare/test.txt "" myusername $password'
+  echo '  smbtest smb://myserver/myshare/test.txt "" myusername $password' 10
 
 else
   echo Java compile failed. See error above.
