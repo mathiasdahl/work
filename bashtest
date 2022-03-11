@@ -10,7 +10,7 @@ $JAVA_HOME/bin/javac -classpath $myclasspath MySmbClient.java
 
 alias smbtest="$JAVA_HOME/bin/java -Djcifs.util.loglevel=10 -classpath $myclasspath MySmbClient"
 
-echo -n Enter password for the SMB test (it will not be shown): 
+echo -n "Enter password for the SMB test (it will not be shown): "
 read -s password
 echo
 
