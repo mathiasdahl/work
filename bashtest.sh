@@ -2,7 +2,7 @@
 
 echo Downloading Java source code...
 
-curl -s -v -H "Cache-Control: no-cache" https://raw.githubusercontent.com/mathiasdahl/work/main/MySmbClient.java > MySmbClient.java
+curl -s -H "Cache-Control: no-cache" https://raw.githubusercontent.com/mathiasdahl/work/main/MySmbClient.java > MySmbClient.java
 
 echo Compiling...
 
