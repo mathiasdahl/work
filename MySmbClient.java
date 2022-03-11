@@ -9,7 +9,7 @@ import jcifs.Config;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-zzzpublic class MySmbClient {
+public class MySmbClient {
 
    static long start;
    private static Logger logger = LoggerFactory.getLogger(MySmbClient.class);
