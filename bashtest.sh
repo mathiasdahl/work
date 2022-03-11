@@ -12,9 +12,9 @@ myclasspath=".:javaimpl/jcifs-2.1.16.jar:wlp/lib/com.ibm.ws.org.slf4j.api.1.7.7_
 
 if $JAVA_HOME/bin/javac -classpath $myclasspath MySmbClient.java; then
 
-  cat <<LOGPROPS
+cat > logging.properties <<LOGPROPS
   
-  ############################################################
+############################################################
 #       Default Logging Configuration File
 #
 # You can use a different file by specifying a filename
@@ -77,9 +77,8 @@ java.util.logging.ConsoleHandler.formatter = java.util.logging.SimpleFormatter
 # For example, set the com.xyz.foo logger to only log SEVERE
 # messages:
 com.xyz.foo.level = SEVERE
-
   
-  LOGPROPS > logging.properties
+LOGPROPS
 
   alias smbtest="$JAVA_HOME/bin/java -classpath $myclasspath MySmbClient"
   alias smbtestdebug="$JAVA_HOME/bin/java -Djava.util.logging.config.file=logging.properties -classpath $myclasspath MySmbClient"
