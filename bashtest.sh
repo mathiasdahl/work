@@ -1,3 +1,5 @@
+#!/bin/bash
+
 echo Downloading Java source code...
 
 curl https://raw.githubusercontent.com/mathiasdahl/work/main/MySmbClient.java > MySmbClient.java
