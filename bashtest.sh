@@ -31,5 +31,5 @@ if $JAVA_HOME/bin/javac -classpath $myclasspath MySmbClient.java; then
   echo '  smbtest smb://myserver/myshare/test.txt "" myusername $password'
 
 else
-  echo Compiled failed.
+  echo Java compile failed. See error above.
 fi
