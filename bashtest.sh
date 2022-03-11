@@ -21,7 +21,7 @@ if $JAVA_HOME/bin/javac -classpath $myclasspath MySmbClient.java; then
   echo
 
   echo
-  echo Now try with: smbtest smb://SERVER/SHARE/FILENAME DOMAIN USERNAME $password [NUMBEROFLINESTOWRITE]
+  echo Now try an SMB upload with: 'smbtest smb://SERVER/SHARE/FILENAME DOMAIN USERNAME $password [NUMBEROFLINESTOWRITE]'
   echo
   echo 'DOMAIN can be empty ("")'
   echo NUMBEROFLINESTOWRITE is the number of 100 byte long lines to write to the file
