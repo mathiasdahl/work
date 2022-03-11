@@ -2,7 +2,7 @@
 
 echo Downloading Java source code...
 
-curl https://raw.githubusercontent.com/mathiasdahl/work/main/MySmbClient.java > MySmbClient.java
+curl -s https://raw.githubusercontent.com/mathiasdahl/work/main/MySmbClient.java > MySmbClient.java
 
 echo Compiling...
 
@@ -21,12 +21,14 @@ if $JAVA_HOME/bin/javac -classpath $myclasspath MySmbClient.java; then
   echo
 
   echo
-  echo Now try with: smbtest smb://SERVER/SHARE/test.txt DOMAIN USERNAME $password [NUMBEROFLINESTOWRITE]
+  echo Now try with: smbtest smb://SERVER/SHARE/FILENAME DOMAIN USERNAME $password [NUMBEROFLINESTOWRITE]
   echo
-  echo DOMAIN can be empty ("")
+  echo 'DOMAIN can be empty ("")'
   echo NUMBEROFLINESTOWRITE is the number of 100 byte long lines to write to the file
   echo $password is the variable that keeps the password you entered earlier.
   echo
+  echo Example:
+  echo '  smbtest smb://myserver/myshare/test.txt "" myusername $password'
 
 else
   echo Compiled failed.
