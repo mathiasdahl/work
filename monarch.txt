@@ -1,0 +1,12 @@
+mkdir /tmp/test
+
+cd /tmp/test
+
+curl -o MySmbClient.java https://raw.githubusercontent.com/mathiasdahl/work/main/MySmbClient3.java
+
+myclasspath=.:/opt/ifs/javaimpl/jcifs-2.1.16.jar:/opt/ifs/wlp/lib/com.ibm.ws.org.slf4j.api.1.7.7_1.0.60.jar:/opt/ifs/javaimpl/bcprov-jdk15on-1.64.jar
+
+javac -classpath $myclasspath MySmbClient.java
+
+java -classpath $myclasspath MySmbClient smb://server/share/testfromk8s.txt "" username password
+
